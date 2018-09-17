@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+		<title>Интернет-магазин</title>
+    	<link rel="stylesheet" href="css/style.css">
+    	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    	<script>
+      		$(function(){
+        	$("#menu").load("menu.html");
+      		});
+		</script>
+
+		<script>
+			function addToCard(bt){
+				var $input = $('.counter');
+				$input.text(parseInt($input.text()) + 1);
+			};
+		</script>
+			
+	</head>
+	  
+  	<body>
+
+		<div id="menu">  
+		</div>
+
+		<div id="middle">
+			<H1>Смартфон Apple iPhone 10</H1>
+			<div class="product">
+				<!-- Большое фото -->
+				<div class="image">
+					<img src="images/Yeni-Orijinal-Apple-iPhone-7-2-GB-RAM-32-GB-128-GB-ROM-IOS-10-LTE.jpg">
+				</div>
+				<!-- Большое фото (The End) -->
+
+				<!-- Описание товара -->
+				<div class="description">
+					Дисплей Super Retina в двух размерах, один из которых стал самым большим в истории iPhone. Ещё более быстрый Face ID. Самый мощный и умный процессор iPhone. И потрясающая двойная камера. В iPhone XS воплощено всё, что вы любите в iPhone. На новом уровне.
+
+					В продаже с 28 сентября
+					<!-- Цена -->
+					<div class="price">
+						200.00 $
+					</div>
+					<!-- Цена (The End) -->
+					<form action="/cart">
+						<input type="button" value="Купить" id="prod1" onClick="addToCard(this.id);">
+					</form>
+				</div>
+				<!-- Описание товара (The End) -->
+			</div>
+		</div>
+	</body>
+</html>
